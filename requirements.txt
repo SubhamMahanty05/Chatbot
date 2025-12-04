@@ -1,0 +1,101 @@
+# Requirements for Hybrid Sentiment Chatbot with Groq LLaMA 3.1
+python version 3.8+
+nltk==3.8.1
+groq==0.5.0
+sentence-transformers==2.6.1
+numpy==1.26.4
+
+# ---- Core NLP & Sentiment Analysis ----
+nltk==3.8.1
+
+# ---- LLM Provider (Groq API Client) ----
+groq==0.5.0
+
+# ---- Optional / Recommended for Stability ----
+requests==2.31.0
+
+# ---- If VADER Lexicon needs download ----
+# Run these manually if needed:
+# python -m nltk.downloader vader_lexicon
+
+1. nltk
+
+Used for VADER sentiment analysis engine
+Your code calls:
+
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+
+So nltk is mandatory.
+
+2. groq
+
+Used to integrate LLaMA-3.1-8B via Groq API.
+
+from groq import Groq
+
+
+This is the lightweight SDK that sends chat-completion requests.
+
+3. requests
+
+Some environments require it for robust networking; Groq internally uses it.
+
+
+How to Install All Dependencies
+
+Run:
+
+pip install -r requirements.txt
+
+
+Then download VADER lexicon (once):
+
+python -m nltk.downloader vader_lexicon
+
+
+External Libraries:
+1. nltk
+
+Used for VADER sentiment analysis
+Your code uses:
+
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+2. groq
+
+Used to access Groq LLaMA-3.1-8B model API.
+
+from groq import Groq
+
+3. requests (optional but recommended)
+
+Sometimes required for stable API communication (Groq uses it internally).
+
+Standard Python Libraries Used (Built-in, NO installation required)
+
+json
+
+For memory storage (user_memory.json, chat_sessions.json)
+
+os
+
+File paths, environment variables
+
+re
+
+Regex for sentiment/intent/name extraction
+
+datetime
+
+Timestamping chat sessions
+
+typing
+
+Type hinting like List, Dict, Tuple
+
+random
+
+Used to choose replies without repetition
+
+math (implicitly used through numeric processing)
