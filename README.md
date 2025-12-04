@@ -1,7 +1,7 @@
 # Chatbot
 This project is an intelligent, emotion-aware chatbot built to deliver fast and contextually accurate interactions. It uses a Hybrid Sentiment Analysis Engine for Tier 1 and Tier 2 emotion detection, paired with Groq’s LLaMA-3.1 8B model to generate natural, high-quality responses.
 
-for clear understanding and structured reading, you can refer to the report file which is therein repository. 
+for clear understanding and structured reading, you can refer to the report file which is there in repository. The file contains everything which is presented here.
 
 
 Emotion - Aware AI chatbot with Hybrid Sentiment Analysis and Groq LLaMA Integration
